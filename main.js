@@ -56,6 +56,17 @@ const aidan = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasic
 
 scene.add(aidan);
 
+const earthTexture = new THREE.TextureLoader().load('earth.jpg');
+
+const earth = new THREE.Mesh(
+  new THREE.SphereGeometry(3, 32, 32),
+  new THREE.MeshStandardMaterial({
+    map: earthTexture,
+  })
+);
+
+scene.add(earth);
+
 function animate() {
     requestAnimationFrame(animate);
   
