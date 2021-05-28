@@ -50,6 +50,12 @@ Array(200).fill().forEach(addStar);
 const spaceTexture = new THREE.TextureLoader().load('space.jpg');
 scene.background = spaceTexture;
 
+const aidanTexture = new THREE.TextureLoader().load('aidan.jpg');
+
+const aidan = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: aidanTexture }));
+
+scene.add(aidan);
+
 function animate() {
     requestAnimationFrame(animate);
   
